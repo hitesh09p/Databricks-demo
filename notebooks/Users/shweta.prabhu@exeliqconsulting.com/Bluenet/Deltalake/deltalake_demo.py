@@ -101,12 +101,12 @@ display(updatesDF)
 
 deltaTable.alias("events").merge(
 updatesDF.alias("updates"),
-  "events.action = updates.action")\
+  "evnents.action = updates.action")\
 .whenMatchedUpdate(set = {"action": "updates.action"})\
-.whenNotMatchedInsert(values=
+.whenNotmatchedInsert(values=
  {
    "action": "updates.action",
    "date" : "updates.date"
- }
+ }\
  )\
-.execute()
+.execute
