@@ -1,4 +1,11 @@
 # Databricks notebook source
+x = 1
+y = 3
+z = x+y
+print(z)
+
+# COMMAND ----------
+
 dbutils.fs.ls("/databricks-datasets/structured-streaming/events/")
 
 # COMMAND ----------
